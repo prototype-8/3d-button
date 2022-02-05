@@ -1,0 +1,92 @@
+.td-button {
+  display: inline-flex;
+
+  aspect-ratio: 1 / 1;
+
+  height: auto;
+  width: 100%;
+  max-width: 280px;
+
+  margin: 16px;
+  padding: 0;
+  outline: none;
+  border: none;
+  border-radius: 4px 4px 8px 8px;
+  background: linear-gradient(-45deg, #b0bec5, 8%, #f5f5f5, 50%, #e2f1f8, 80%, #f5f5f5);
+  background-size: 320% 320%;
+  background-position: 100% 100%;
+
+  overflow: hidden;
+
+  box-shadow:
+    4px 4px 4px rgba(black, 0.1),
+    16px 16px 16px rgba(black, 0.1),
+    24px 24px 16px rgba(black, 0.1),
+    32px 32px 16px rgba(black, 0.1),
+    inset 2px 2px 2px #fff;
+
+  transition: box-shadow 120ms ease-out, background 80ms ease-in-out;
+
+  &:hover {
+    outline: none;
+    border: none;
+  }
+
+  &:global.active {
+    background-position: 0 0;
+
+    box-shadow:
+      4px 4px 4px rgba(0, 0, 0, 0.1),
+      6px 6px 4px rgba(0, 0, 0, 0.1),
+      8px 8px 4px rgba(0, 0, 0, 0.1),
+      10px 10px 4px rgba(0, 0, 0, 0.1),
+      inset 1px 1px 1px #fff;
+
+    :local .td-icon {
+      fill: #64ffda;
+    }
+  }
+}
+
+
+.td-left {
+  position: relative;
+  left: -1px;
+
+  width: 14.4%;
+  height: 100%;
+  flex-shrink: 0;
+
+  background: linear-gradient(#fff, 64%, #eeeeee);
+  filter: blur(1.2px);
+}
+
+
+.td-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-grow: 1;
+}
+
+
+.td-icon {
+  width: 48%;
+  height: auto;
+  fill: rgba(black, 0.88);
+  transition: fill 120ms ease-out;
+}
+
+
+.td-right {
+  position: relative;
+  right: -1px;
+
+  width: 14.4%;
+  height: 100%;
+  flex-shrink: 0;
+
+  background-color: #bdbdbd;
+  filter: blur(1.2px);
+}
